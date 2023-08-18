@@ -71,9 +71,9 @@ router.get("/get", async (req, res) => {
       i.image as ingredient_image,
       i.type as ingredient_type
     FROM
-      recipe_ingredient ri
+      recipe_ingredients ri
     INNER JOIN
-      ingreditnt i
+      ingredients i
     ON
       i.id = ri.ingredient_id
     WHERE ri.recipe_id = $1
